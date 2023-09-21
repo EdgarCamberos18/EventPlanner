@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/template}">
+<head>
+
+</head>
+<body>
+<div layout:fragment="content">
+    <div class="col-lg-12 mt-lg-0 mt-4">
+        <div class="card mt-4" id="basic-info">
+            <div class="card-header">
+                <h5>Usuarios</h5>
+            </div>
+            <div class="card-body pt-0">
+                <div class="table-responsive">
+                    <table class="table table-group-divider table-hover table-responsive" id="datatable-search">
+                        <thead class="thead-light">
+                        <tr>
+                            <th class="col">Username</th>
+                            <th>Email</th>
+                            <th>Rol</th>
+                            <th>Suscripcion</th>
+                            <th>Estado</th>
+                            <th></th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="user: ${users}">
+                            <td class="text-sm font-weight-normal" th:text="${user.username}">Nombre</td>
+                            <td class="text-sm font-weight-normal" th:text="${user.email}">Email</td>
+                            <td class="text-sm font-weight-normal">
+                                <ul>
+                                    <li th:each="role : ${user.roles}" th:text="${role.name}"></li>
+                                </ul>
+                            </td>
+                            <td class="text-sm font-weight-normal" th:text="${user.subscriptionExpiryDate}">
+                                Suscripcion
+                            </td>
+                            <td>
+                                <span class="badge badge-success" th:if="${user.enabled}">Activo</span>
+                                <span class="badge badge-danger" th:if="${not user.enabled}">Inactivo</span>
+                            </td>
+                            <td>
+                                <button>Ver</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div layout:fragment="js">
+    <script src="/assets/js/plugins/datatables.js"></script>
+    <script>
+        const dataTableSearch = new simpleDatatables.DataTable("#datatable-search", {
+            searchable: true,
+            fixedHeight: true
+        });
+    </script>
+
+</div>
+
+</body>
+</html>

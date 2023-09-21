@@ -1,0 +1,214 @@
+body {
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.background {
+    background: rgba(0, 0, 0, 0.61) url('../images/login-background.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: darken;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    min-height: 100vh;
+
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: rgba(24, 24, 24, 0.72);
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+    border-radius: 15px;
+    width: 500px;
+    margin: 10vh auto;
+    margin-top: 100px;
+
+}
+
+form {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+}
+
+.form-item {
+    display: flex;
+    width: 90%;
+    background: rgba(24, 24, 24, 0.05);
+    margin: 10px auto;
+    align-items: center;
+    border-radius: 15px;
+    border-bottom: 1px solid rgb(82, 81, 81);
+}
+.form-item:hover {
+    border: 1px solid rgb(82, 81, 81);;
+}
+input {
+    font-size: 18px;
+    width: 80%;
+    height: 30px;
+    outline: none;
+    background: transparent;
+    border: none;
+    margin: auto;
+    color: white;
+}
+
+
+span {
+    margin: 5px;
+    color: rgb(172, 172, 172);
+    cursor: default;
+    user-select: none;
+    background: rgba(85, 81, 81, 0.637);
+    padding: 5px;
+    border-radius: 15px;
+}
+/*
+button[type="submit"] {
+    width: 250px;
+    font-size: 20px;
+    margin: 10px auto;
+    padding: 10px 16px;
+    border: none;
+    text-align: center;
+    color: white;
+    background: rgba(122, 123, 116, 0.72);
+
+}
+button[type="submit"]:hover {
+    background: rgb(172, 134, 8);
+}*/
+p:first-of-type {
+    font-size: 18px;
+    margin: 0;
+}
+
+.options {
+    display: flex;
+    margin:  10px auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.fb:hover{
+    background: rgb(5, 5, 73);
+    border: none;
+    box-shadow: 0 0 5px  rgb(5, 5, 73);
+}
+
+.gl:hover{
+    background: rgb(73, 5, 5);
+    border: none;
+    box-shadow: 0 0 5px  rgb(73, 5, 5);
+
+}
+
+p {
+    font-size: 18px;
+    margin: 5px;
+}
+a{
+    color: white;
+}
+a:hover{
+    color: grey;
+}
+
+@media screen and (max-width:550px) {
+    .container {
+        width: 90%;
+    }
+}
+
+button {
+    border-radius: 20px;
+    width: 250px;
+    font-size: 20px;
+    margin: 30px auto;
+    padding: 10px 16px;
+    border: none;
+    text-align: center;
+    background: rgba(0, 128, 255, 0.8);
+    color: #fff;
+    border: none;
+    position: relative;
+    height: 50px;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+}
+
+button:hover {
+    background: rgba(0, 128, 255, 0.8);
+    color: #fff;
+    box-shadow: 0 0.5em 0.5em -0.4em rgba(0, 255, 0, 0.6); /* Cambiado a un tono naranja claro */
+    transform: translateY(-0.25em);
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px; /* Aumenta el tamaño del círculo */
+    height: 150px; /* Aumenta el tamaño del círculo */
+    background-color: rgba(0, 128, 255, 0.9); /* Cambia el color del círculo */
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: -50px;
+    top: -70px; /* Mueve el círculo hacia arriba para que sobresalga */
+}
+
+.fa-icon {
+    font-size: 90px; /* Aumenta el tamaño del icono */
+    color: rgba(255,255,255,0.8); /* Cambia el color del icono a blanco */
+}
+
+.remember-forgot-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 10px;
+    align-items: center;
+    margin-top: 15px;
+    margin-right: 20px;
+    margin-left: 25px;
+}
+
+.remember-pass {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.remember-pass label {
+    font-size: 14px;
+    margin-right: 10px; /* Elimina el margen del label */
+    white-space: nowrap; /* Evita el salto de línea */
+}
+
+.forgot-pass {
+    font-size: 14px;
+    color: #fff;
+    text-align: right;
+    text-decoration: none;
+}
+
+.forgot-pass:hover {
+    text-decoration: underline;
+}

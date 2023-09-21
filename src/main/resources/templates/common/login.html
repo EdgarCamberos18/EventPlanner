@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleafe.org">
+
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="/css/login-style.css" rel="stylesheet"/>
+
+    <script src="https://kit.fontawesome.com/63496b2cd4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="background"></div>
+<div class="container">
+    <div class="circle">
+        <i class="fa-regular fa-user fa-icon"></i> <!-- Cambia "fa-camera" al icono que desees -->
+    </div>
+    <form id="login-form" action="/login" method="post">
+        <div class="form-item">
+            <span class="material-icons-outlined">
+                account_circle
+            </span>
+            <input type="text" name="text" id="text" placeholder="Username">
+        </div>
+
+        <div class="form-item">
+            <span class="material-icons-outlined">
+                lock
+            </span>
+            <input type="password" name="password" id="password" placeholder="Password">
+        </div>
+
+        <div class="remember-forgot-container">
+            <div class="remember-pass">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember Password</label>
+            </div>
+            <a href="#" class="forgot-pass">Forgot Password?</a>
+        </div>
+
+        <button class="btnfos-2" type="submit">LOGIN</button>
+
+        <a href="#">Create an account</a></p>
+    </form>
+</div>
+</body>
+
+</html>
